@@ -2,12 +2,15 @@
 if __name__ == "__main__":
     import sys
 
-    argc = len(sys.argv) - 1
-    x = 0
-    total = 0
-    for arg in sys.argv:
-        if c != 0:
-            total = total + int(arg)
+    def add_arg(argv):
+        n = len(argv) - 1
+        if n == 0:
+            print("{:d}".format(n))
+            return
         else:
-            x = x + 1
-        print("{:d}".format(result))
+        x = 1
+        add = 0
+        while x <= n:
+            add += int(argv[x])
+            x += 1
+        print("{:d}".format(add))
