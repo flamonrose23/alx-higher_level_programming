@@ -1,9 +1,8 @@
 #!/usr/bin/python3
+
 def no_c(my_string):
-    str = ""
-    for x in range(len(my_string)):
-        if my_string[x] == ‘c’ or my_string[x] == ‘C’:
-            pass
-        else:
-            str = str + my_string[x]
-            return (str)
+    new_str = ""
+    for x in my_string:
+        if (x != 'c') and (x != 'C'):
+            new_str += x
+    return (new_str)
