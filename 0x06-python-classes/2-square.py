@@ -15,5 +15,5 @@ class Square:
             raise TypeError("exception if size is not an integer")
         if size < 0:
             raise ValueError("exception if size >= 0")
-        else:
-            self.__size = size
+
+        self.__size = size
