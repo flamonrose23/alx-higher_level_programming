@@ -10,13 +10,12 @@ class Square:
         Args: representing size of this class square
         Raises: TypeError & ValueError
         """
-
-        if not isinstance(size, int):
-            raise TypeError("exception if size is not an integer")
-        if size < 0:
-            raise ValueError("exception if size >= 0")
-
         self.__size = size
+
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size should be >= 0")
 
 
 def area(self):
