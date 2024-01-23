@@ -12,8 +12,8 @@ class Square:
         """
 
         if not isinstance(size, int):
-            raise TypeError("exception if size is not an integer")
+            raise TypeError("if size is an integer")
         if size < 0:
-            raise ValueError("exception if size >= 0")
+            raise ValueError("if size >= 0")
 
         self.__size = size
