@@ -59,17 +59,17 @@ class Rectangle:
         else:
             return (self.__width * 2) + (self.__height * 2)
 
-      def __str__(self):
-        """
-        returning string suitable for printing rectangle
-        """
-        str = ""
-        if self.__width == 0 or self.__height == 0:
-            return ("")
+    def __str__(self):
+    """
+    returning printable representation of the Rectangle
+    """
 
-        rectangle = []
-        for x in range(self.__height):
-            [rectangle.append('#') for y in range(self.__width)]
-            if x != self.__height - 1:
-                rectangle.append("\n")
-        return ("".join(rectangle))
+    rect = ""
+    if self.__height == 0 or self.__width == 0:
+        return rect
+        for x in range(self.__height):
+            for y in range(self.__width):
+                rect += '#'
+            if x < self.__height - 1:
+                rect += '\n'
+        return rect
