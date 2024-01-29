@@ -59,20 +59,17 @@ class Rectangle:
         else:
             return (self.__width * 2) + (self.__height * 2)
 
-      def _draw_rectangle(self):
+      def __str__(self):
         """
         returning string suitable for printing rectangle
         """
         str = ""
-        for x in range(self.__height):
-            for y in range(self.__width):
-                str += '#'
-            if self.__width != 0 and x < (self.__height - 1):
-                str += '\n'
-        return str
+        if self.__width == 0 or self.__height == 0:
+            return ("")
 
-    def __str__(self):
-        """
-        returning output of rectangle suitable for printing.
-        """
-        return self._draw_rectangle()
+        rectangle = []
+        for x in range(self.__height):
+            [rectangle.append('#') for y in range(self.__width)]
+            if x != self.__height - 1:
+                rectangle.append("\n")
+        return ("".join(rectangle))
