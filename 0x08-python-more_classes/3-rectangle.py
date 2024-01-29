@@ -58,3 +58,17 @@ class Rectangle:
             return 0
         else:
             return (self.__width * 2) + (self.__height * 2)
+
+    def __str__(self):
+        """
+        Modify the special method __str__
+        """
+        my_print = ""
+        if self.__height == 0 or self.__width == 0:
+            return my_print
+        for i in range(self.__height):
+            for j in range(self.__width):
+                my_print += '#'
+                if i < self.__height - 1:
+                    my_print += '\n'
+                    return my_print
