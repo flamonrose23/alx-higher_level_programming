@@ -61,14 +61,14 @@ class Rectangle:
 
     def __str__(self):
         """
-        Modify the special method __str__
+        returning special string representation rectangle
         """
-        my_print = ""
+        rect = ""
         if self.__height == 0 or self.__width == 0:
-            return my_print
-        for i in range(self.__height):
-            for j in range(self.__width):
-                my_print += '#'
-                if i < self.__height - 1:
-                    my_print += '\n'
-                    return my_print
+            return rect
+        for x in range(self.__height):
+            for y in range(self.__width):
+                rect += '#'
+                if x < self.__height - 1:
+                    rect += '\n'
+                    return rect
