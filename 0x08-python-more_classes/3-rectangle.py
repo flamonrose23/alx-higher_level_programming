@@ -63,13 +63,12 @@ class Rectangle:
         """
         returning printable rectangle
         """
+        str = ""
         if self.__width == 0 or self.__height == 0:
             return ""
-        else:
-            str = ""
-            for x in range(self.__height):
-                if x == self.__height - 1:
-                    str += self.__width * '#'
-                else:
-                    str += self.__width * '#' + '\n'
-                    return str
+        for x in range(self.__height):
+            for y in range(self.__width):
+                str += '#'
+            if x < self.__height - 1:
+                str += '\n'
+            return str
