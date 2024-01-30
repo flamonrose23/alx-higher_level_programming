@@ -1,0 +1,54 @@
+===========================
+Using the text for function 0-add_integer.py
+===========================
+
+This defining a function ``add_integer(a, b=98)``.
+============
+How to work
+===========
+
+Importing function from the module:
+>> add_integer = __import__('0-add_integer').add_integer
+
+**
+Simple operations with two integers:
+
+	>> add_integer(3, 5)
+	8
+
+	>> add_integer(5, -3)
+	2
+
+**
+
+float and non-float, negative results but only in 2 integers:
+**
+	>> add_integer(20, 4.3)
+	24
+**
+Otherwise, system raise Error messages in theses situations:
+
+**
+String input:
+   	 >> add_integer(3, "integer")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+**
+None input:
+   	>> add_integer(None)
+    	Traceback (most recent call last):
+    	...
+    	TypeError: a must be an integer
+
+**
+Double negative float input:
+    	>> add_integer(-10.4, -4.8)
+    	-14
+
+Double string input:
+    	>> add_integer("Hol", "integer")
+    	Traceback (most recent call last):
+    	...
+    	TypeError: a must be an integer
