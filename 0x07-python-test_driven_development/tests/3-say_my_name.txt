@@ -1,0 +1,48 @@
+===========================
+Using the text for function 3-say_my_name.py
+===========================
+
+This defining a function ``say_my_name``.
+============
+How to work
+===========
+
+Importing function from the module:
+say_my_name = __import__('3-say_my_name').say_my_name
+
+**
+	Usage of the text:
+**
+
+	>> with only first name:
+
+	> say_my_name("Fafo")
+    	My name is Fafo 
+
+	>> where one of 2 args is not string:
+
+	> say_my_name("Fafo", 4)
+	Traceback (most recent call last):
+        ...
+        TypeError: last_name must be a string
+
+	> say_my_name(5, "Mari")
+	Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
+
+**
+	>> with Strange format
+
+	> say_my_name(1, 1)
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+**
+	>> With missing arguments
+
+	> say_my_name()
+	Traceback (most recent call last):
+	...
+	TypeError: say_my_name() missing one required positional argt: 'first_name'
