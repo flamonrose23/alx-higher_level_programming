@@ -33,3 +33,11 @@ class Student:
                     nw_dict.update({j: self.__dict__[j]})
             return nw_dict
         return self.__dict__.copy()
+
+    def reload_from_json(self, json):
+        """
+        Replacing all attributes of the Student instance
+        """
+
+        for j in json:
+            self.__dict__.update({j: json[j]})
