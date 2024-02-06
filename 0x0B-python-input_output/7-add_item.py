@@ -4,7 +4,6 @@ Writing script adding all arguments
 """
 
 
-import json
 from os import path
 import sys
 
