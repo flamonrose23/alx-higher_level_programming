@@ -20,6 +20,6 @@ def pascal_triangle(n):
         for y in range(1, x):
             row.append(triangles[x - 1][y - 1] + triangles[x - 1][y])
         row.append(1)
-        triangles.append(1)
+        triangles.append(row)
 
-    return (triangles)
+    return triangles
