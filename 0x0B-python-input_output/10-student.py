@@ -26,10 +26,10 @@ class Student:
         of a Student instance
         """
 
-        new_dict = dict()
+        my_dict = dict()
         if type(attrs) is list and all(type(x) is str for j in attrs):
             for j in attrs:
                 if j in self.__dict__:
-                    new_dict.update({j: self.__dict__[j]})
-            return new_dict
+                    my_dict.update({j: self.__dict__[j]})
+            return my_dict
         return self.__dict__.copy()
