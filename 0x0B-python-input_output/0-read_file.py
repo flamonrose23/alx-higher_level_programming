@@ -8,6 +8,6 @@ def read_file(filename=""):
     """
     Reading txt file & printing stdout
     """
-    with open(filename, name="UTF8") as f:
+    with open(filename, encoding="UTF8") as f:
         read_text = f.read()
         print(read_text, end="")
