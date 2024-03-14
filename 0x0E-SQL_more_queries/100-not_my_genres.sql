@@ -5,11 +5,11 @@
 
 SELECT tv_genres.name FROM tv_genres
 WHERE tv_genres.name NOT IN
-      (SELECT a.name AS name
-      FROM tv_genres AS a
-      JOIN tv_show_genres AS b
-      ON b.genre_id = a.id
-      JOIN tv_shows AS c
-      ON b.show_id = c.id
-      WHERE c.title = 'Dexter')
+      (SELECT x.name AS name
+      FROM tv_genres AS x
+      JOIN tv_show_genres AS y
+      ON y.genre_id = x.id
+      JOIN tv_shows AS z
+      ON y.show_id = z.id
+      WHERE z.title = 'Dexter')
 ORDER BY tv_genres.name ASC;
