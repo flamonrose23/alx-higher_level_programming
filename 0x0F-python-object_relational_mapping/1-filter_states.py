@@ -1,24 +1,17 @@
 #!/usr/bin/python3
-
+"""  listing all states from database hbtn_0e_0_usa """
 import MySQLdb
-from sys import argv
+import sys
 
-# The code should not be executed when imported
-if __name__ == '__main__':
-    # make a connection to the database
-    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
-                         passwd=argv[2], db=argv[3])
 
-    # It gives us the ability to have multiple seperate working environments
-    # through the same connection to the database.
+if __name__ == "__main__":
+    db = MySQLdb.connect(host="localhost", user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3], port=3306)
     curent = db.cursor()
-
-    curent.execute("SELECT * FROM states WHERE name\
-                LIKE BINARY 'N%' ORDER BY id ASC")
-
+    curent.execute("""SELECT * FROM states WHERE name
+                LIKE BINARY 'N%' ORDER BY states.id""")
     rows = curent.fetchall()
-    for x in rows:
-        print(x)
-    # Cleaning up process
-    cur.close()
+    for row in rows:
+        print(row)
+    curent.close()
     db.close()
