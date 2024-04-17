@@ -5,20 +5,20 @@ from sys import argv
 
 # The code should not be executed when imported
 if __name__ == '__main__':
-    # maing connection to database
+    # make a connection to the database
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3])
 
-    # giving the ability to have multiple seperate working environments
-    # through same connection to the database.
-    curt = db.cursor()
+    # It gives us the ability to have multiple seperate working environments
+    # through the same connection to the database.
+    curent = db.cursor()
 
-    curt.execute("SELECT * FROM states WHERE name\
+    curent.execute("SELECT * FROM states WHERE name\
                 LIKE BINARY 'N%' ORDER BY id ASC")
 
-    rows = curt.fetchall()
+    rows = curent.fetchall()
     for x in rows:
         print(x)
-    # Clean up process
-    curt.close()
+    # Cleaning up process
+    cur.close()
     db.close()
