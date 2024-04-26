@@ -3,12 +3,13 @@
 Writing script taking URL and email address, sending POST request
 to passed URL with email as param and displaying body of response
 """
-from sys import argv
+import sys
 import requests
 
 
-if __name__ == " __main__":
-    url = argv[1]
-    valour = {"email": argv[2]}
-    req = requests.post(url, data=valour)
-    print(req.text)
+if __name__ == "__main__":
+    url = sys.argv[1]
+    email = sys.argv[2]
+    valours = {"email": email}
+    res = requests.post(url, data=valours)
+    print(res.text)
