@@ -3,7 +3,7 @@
 Writing script taking URL and email address, sending POST request
 to passed URL with email as param and displaying body of response
 """
-import sys
+from sys import argv
 import requests
 
 
